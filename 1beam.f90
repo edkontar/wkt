@@ -310,7 +310,7 @@ FORALL(i=-floor(0.4/dk-1):-2) w(i) = w(i)&
 ! inhomogeneity influence 
 
 FORALL(i=-Nv+1:Nv-1)  w(i) = w(i)-coll_ei*dt*w(i)/4.
-! collisional absorption of plasma waves 
+! collisional absorption of plasma waves
 
 where( W < 1e-29 ) W=1e-29
 
