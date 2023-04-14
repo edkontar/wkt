@@ -6,9 +6,8 @@ PROGRAM QBEAM_PLASMA
   ! and velocity, and first order approximation over time)
 
   ! Created by :
-  ! Eduard Kontar (kontar@rocketmail.com)
-  ! National Science Center "Kharkov Institute of Physics & Technology"
-  ! (c) 1997-2000
+  ! Eduard@ Glasgow 2009
+  ! minor changes by Eduard@Glasgow in April 2023
  
   USE CONSTANT
 
@@ -306,11 +305,8 @@ FORALL(i=-floor(0.4/dk-1):-2) w(i) = w(i)&
 +a2*W(i)*(f(i+1)-f(i))*v_t*dt/(dk) +spont_w*f(i)/abs(kx(i))*alog(1./abs(kx(i)))*dt
 ! - gamma_L(i)*W(i)*dt+spont_w*f(i)/abs(kx(i))*alog(1./abs(kx(i)))*dt
 
-!FORALL(i=-Nv+1:Nv-1)  w(i) = w(i)+v_t*(W(i+1)-W(i))*dt/(dk*1e+5)-coll_ei*dt*w(i)/4.
+FORALL(i=-Nv+1:Nv-1)  w(i) = w(i)+v_t*(W(i+1)-W(i))*dt/(dk*1e+5)-coll_ei*dt*w(i)/4.
 ! inhomogeneity influence 
-
-FORALL(i=-Nv+1:Nv-1)  w(i) = w(i)-coll_ei*dt*w(i)/4.
-! collisional absorption of plasma waves
 
 where( W < 1e-29 ) W=1e-29
 
@@ -344,7 +340,7 @@ FORALL(i=2:floor(0.4/dk-1)) f(i) =f(i) + coll_ei*dt*((kx(i)**5)*(f(i+1)-f(i))-&
 FORALL(i=-floor(0.4/dk-1):-2) f(i) =f(i) - coll_ei*dt*((kx(i)**5)*(f(i+1)-f(i))-&
 (kx(i-1)**5)*(f(i)-f(i-1)))*kx(i)*kx(i)/(dk*dk)
 
-!collisions stop here
+! collisions stop here
 
 where (F < 1e-20) F=1e-20
 
@@ -461,8 +457,3 @@ end subroutine Check_time
 !-----------------------------------------------------------
 
 END PROGRAM
-
-
-
-
-
