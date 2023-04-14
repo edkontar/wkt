@@ -4,18 +4,12 @@ pro  fw_v
 ;density
 ;energy density of electrons and plasmons
 
-
-
 nb=1e8
 vb=5.e+9
 
 sc_fv=[4.4e-8,5.1e-8,4.6e-8,1.5e-8,3.3e-9,9.3e-11,2e-9]
 sc_v=[6.3,7.6,9.2,11.2,13.5,16.3]
-
-
 col_ei=3e3 ; 1/s
-
-
 
 Nk=1001
 ;the file to show
@@ -67,7 +61,6 @@ WS_thermal=W_s
 F_V0=F_v
 F_total=F_v*1e-10
 ENDIF
-
 
 ;vel=1./kx
 
