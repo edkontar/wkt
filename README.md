@@ -1,4 +1,5 @@
 # wkt
+Weakly turbulent evolution of electrons, Langmuir waves and ion-sound waves in collisional plasma. The code was used to obtain results in  https://doi.org/10.1051/0004-6361/201118216 
 
 #### If not already installed on your system, download and install git for command line from https://git-scm.com/
 #### Launch the Git Bash terminal
