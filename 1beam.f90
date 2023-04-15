@@ -298,12 +298,12 @@ IF ((t-last_save).GE.time_save) THEN
 
 
 FORALL(i=2:floor(0.4/dk-1)) w(i) = w(i)&
--a2*W(i)*(f(i+1)-f(i))*v_t*dt/(dk)+spont_w*f(i)/abs(kx(i))*alog(1./abs(kx(i)))*dt
-!- gamma_L(i)*W(i)*dt +spont_w*f(i)/abs(kx(i))*alog(1./abs(kx(i)))*dt
+-a2*W(i)*(f(i+1)-f(i))*v_t*dt/(dk)+spont_w*f(i)/abs(kx(i))*log(1./abs(kx(i)))*dt
+!- gamma_L(i)*W(i)*dt +spont_w*f(i)/abs(kx(i))*log(1./abs(kx(i)))*dt
 
 FORALL(i=-floor(0.4/dk-1):-2) w(i) = w(i)&
-+a2*W(i)*(f(i+1)-f(i))*v_t*dt/(dk) +spont_w*f(i)/abs(kx(i))*alog(1./abs(kx(i)))*dt
-! - gamma_L(i)*W(i)*dt+spont_w*f(i)/abs(kx(i))*alog(1./abs(kx(i)))*dt
++a2*W(i)*(f(i+1)-f(i))*v_t*dt/(dk) +spont_w*f(i)/abs(kx(i))*log(1./abs(kx(i)))*dt
+! - gamma_L(i)*W(i)*dt+spont_w*f(i)/abs(kx(i))*log(1./abs(kx(i)))*dt
 
 FORALL(i=-Nv+1:Nv-1)  w(i) = w(i)+v_t*(W(i+1)-W(i))*dt/(dk*1e+5)-coll_ei*dt*w(i)/4.
 ! inhomogeneity influence 
