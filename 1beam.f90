@@ -7,7 +7,9 @@ PROGRAM QBEAM_PLASMA
 
   ! Created by :
   ! Eduard@ Glasgow 2009
-  ! minor changes by Eduard@Glasgow in April 2023
+  ! Eduard@ Glasgow, April 2023: minor changes to upload to github
+  ! Eduard@ Glasgow, April 2023: changed alog to a log 
+  !
  
   USE CONSTANT
 
