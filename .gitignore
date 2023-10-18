@@ -1,0 +1,7 @@
+*.mod
+*.exe
+*.dat
+build
+makefile
+progress.ttt
+.vscode/launch.json
