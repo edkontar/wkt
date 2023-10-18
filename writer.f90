@@ -89,7 +89,7 @@ t,' ',n_beam,' ',E_beam,' ',E_L,' ',E_F,' ',E_H,' ',E_total,' ',Lminus,' ',Lplus
   If(WriteStat /= 0) stop 'Error while writing F and W'
 
 close (19)
-write (*,'(A,E10.3,A,E10.3,A,E10.3,A,E10.3)')'Energy (E,L,S,Total) =>',E_beam,' ',E_L,' ',E_H,' ',E_F,' ',E_total
+write (*,'(A,E10.3,A,E10.3,A,E10.3,A,E10.3)')'Energy (E,L,S,Total) =>',E_beam,' ',E_L,' ',E_F,' ',E_total
 write (*,'(A,ES9.3)')'Number (Electrons) =>',N_beam
 ! Close files
 
