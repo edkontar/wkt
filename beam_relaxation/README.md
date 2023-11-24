@@ -1,6 +1,14 @@
 # wkt
 Weakly turbulent evolution of electrons, Langmuir waves and ion-sound waves in collisional plasma. The code was used to obtain results in  https://doi.org/10.1051/0004-6361/201118216 
 
+WKT code (https://github.com/edkontar/wkt) starts with initial electron distribution as a beam 
+The equations are modified to include a source of electrons 
+$$f(v,t=0)=N_{beam}*\exp\left(-\left(v-20.*v_T)**2/(2.*2*2*v_T*v_T))/(sqrt(2.\pi)*2*v_T)$$
+where the beam velocity is $20v_T$.
+
+For details see also https://ui.adsabs.harvard.edu/abs/2002PhRvE..65f6408K/abstract
+
+
 #### If not already installed on your system, download and install git for command line from https://git-scm.com/
 #### Launch the Git Bash terminal
 ```bash
