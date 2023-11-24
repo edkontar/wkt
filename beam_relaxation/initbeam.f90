@@ -33,7 +33,7 @@ USE PARAMS, ONLY: Nbeam,vbeam,d;
       if (vel > 0 ) then 
       F0=ne*exp(-vel*vel/(2.*v_t*v_t))/(sqrt(2.*pi)*v_t) &
       !+a*((30.*V_T)**2/((30.*v_T)**2+Vel**2))**delta
-      +a*exp(-(vel-20.*v_t)**2/(2.*5*5*v_t*v_t))/(sqrt(2.*pi)*5*v_t)
+      +a*exp(-(vel-20.*v_t)**2/(2.*2*2*v_t*v_t))/(sqrt(2.*pi)*2*v_t)
 
       else
       F0=ne*exp(-vel*vel/(2.*v_t*v_t))/(sqrt(2.*pi)*v_t)

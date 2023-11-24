@@ -1,6 +1,7 @@
 *.mod
 *.exe
 *.dat
+*.ps
 build
 makefile
 progress.ttt
