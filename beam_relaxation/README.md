@@ -3,7 +3,7 @@ Weakly turbulent evolution of electrons, Langmuir waves and ion-sound waves in c
 
 WKT code (https://github.com/edkontar/wkt) starts with initial electron distribution as a beam 
 The equations are modified to include a source of electrons 
-$$f(v,t=0)=N_{beam}*\exp\left(-\left(v-20.*v_T)**2/(2.*2*2*v_T*v_T))/(sqrt(2.\pi)*2*v_T)$$
+$$f(v,t=0)=N_{beam}*\exp\left(-\left(v-20.*v_T\right)**2/(2.*2*2*v_T*v_T)\right)/(sqrt(2.\pi)*2*v_T)$$
 where the beam velocity is $20v_T$.
 
 For details see also https://ui.adsabs.harvard.edu/abs/2002PhRvE..65f6408K/abstract
