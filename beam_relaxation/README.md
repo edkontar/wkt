@@ -5,6 +5,7 @@ WKT code (https://github.com/edkontar/wkt) starts with initial electron distribu
 The equations are modified to include a source of electrons 
 
 $$f(v,t=0)=\frac{N_{beam}}{\sqrt(2.\pi)*2*v_T} exp(-\frac{(v-20.v_T)^2}{2(2v_T)^2})$$
+$$f(v,t=0)=\frac{N_{beam}}{2v_T\sqrt{2\pi}} exp(-\frac{(v-20v_T)^2}{2(2v_T)^2})$$
 
 where the beam velocity is $20v_T$.
 
